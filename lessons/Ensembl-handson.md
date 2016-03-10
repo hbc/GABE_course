@@ -126,36 +126,35 @@ Each species in Ensembl has its own home page, where you can find out who provid
 6. Let's suppose we are interested in the LDLR-002 transcript. Click on the LDLR-002 transcript ID, `ENST00000558013`. This should open a new tab entitled `Transcript: LDLR-002` with detailed information for the transcript. 
 
 	- If you click on `exons`, the sequence for each of the exons will be displayed below. If you click on `91 domains and features` the associated domains are output. If you click on `2043 variations`, all variants for the transcript are listed with variation IDs, supporting evidence, and predicted effect on protein function. Additional detailed information on the transcript and protein is available on the side panel. 
+	- Note that the menu on the left changed when you switched tabs. Essentially each internal tab within Ensembl has it's own menu depending on what options make sense for that tyep of information.
 
 7. Now, let's go back to the `Gene: LDLR` tab and select `variant table` from the menu on the left.
 
 8. Next, let's filter the variant list for only variants from `HapMap` only. This selection can be found under `Evidence`, which is under `Filter Other Columns`.
 
-9. The next thing we want to do is look at one of the dbSNP variants called `rs6511720`. Click on the rs ID, this should result in a new tab called `Variant: rs6511720`.
+9. The next thing we want to do is look at one of the dbSNP variants called `rs6511720`. Click on the rs ID, this should result in a new tab called `Variant: rs6511720`. This page lists details about the variant and external and internal links to investigate further "explore this variant."
 
-10. This page lists details about the variant and external and internal links to investigate further "explore this variant."
+10. Click on the "Phenotype Data" icon or in the menu on the left. This will bring up a table of significant associations. If you click on the "?' next to the heading "Phenotype Data", it lists where the information was collected from.
 
+11. The Linkage disequilibrium link on the left lists the various populations for which pairwise linkage disequilibrium information was generated for within a 100kb window. Plots and tables are both available for viewing and download.
 
-7. Let's now visualize our our transcripts for the gene using the `Location` tab. There are three separate parts to this window:
+12. On the `Location: ` tab, the menu on the left offers linkouts to other genome browsers, if you prefer to visualize the information in a different genome browser.
+
+13. Back in the `Transcript` tab, let's click on the `Variant image` link. This will display a complex table displaying association of the variants with protein domains from various protein databases.
+
+14. Let's now visualize the genic area using the `Location` tab. There are three separate parts to this window:
 	- The chromosome with haplotypes and patches flagged within the image. Selecting a region of the chromosome can move you to a new location.
 	- The "Region in detail", which shows a 1Mb region around the selected location on the chromosome. Choosing a different location within this region is also an option.
-	- The bottom image is a detailed, configurable view of the region. You can configure the tracks that appear using the cog on the window bar or you can click on "Configure this page" button on the side of the page.
-	
-	Let's click on `Configure this page` and add some tracks:
-
-	- `dbSNP variants`
-	- `RNASeq models - all brain`
-
-Click the checkmark in the upper right-hand corner of the page when finished with the selections.
+	- The bottom image is a detailed, configurable view of the region. Let's zoom out and then configure the tracks to visualize using the cog on the window bar, or you can click on "Configure this page" button on the left side of the page. Click the checkmark in the upper right-hand corner of the page when finished with the selections.
 
 
 ## Ensembl tools
 
 While Ensembl contains extensive genomic information, we often want to mine the data to export a custom dataset or we would like to use our own data. Ensembl offers a selection of tools to process your own data and to access and mine Ensembl data.
 
-8. Click on `Tools` in the top menu bar. Tools are available for analyzing your own variant data, searching the Ensembl genomes for your DNA or protein sequence, and converting your data's coordinates or Ensembl IDs to a current version. 
+Click on `Tools` in the top menu bar. Tools are available for analyzing your own variant data, searching the Ensembl genomes for your DNA or protein sequence, and converting your data's coordinates or Ensembl IDs to a current version. 
 	
-	BioMart is an extremely useful tool used for data-mining Ensembl's database to return your own custom datasets. Let's explore this tool in more depth.
+	BioMart is an extremely useful tool used for data-mining Ensembl's vast composite database to return custom information. Let's explore this tool in a little more depth.
 
 ![tools](../img/ensembl_tools.png)
 
@@ -164,13 +163,12 @@ You can access BioMart from any page using the link in the menu bar.
 
 	
 ### BioMart
-#### Web interface
 
-The BioMart tool for data mining the Ensembl database is easy to use and requires three steps:
+The BioMart web tool for data mining the Ensembl database is easy to use and requires three steps:
 
 - **Choose a dataset.** The dropdown menu allows you to choose from the Ensembl Gene, Ensembl Variation, Ensembl Regulation, and Vega databases. You will then be able to choose your species of interest.
-- **Select your filters or inputs.** You can restrict your query using various criteria, such as genomic region, specific genes, particular variants, etc.
-- **Choose the attributes to output.** You have a wide range of attributes that you can choose your query to output, such as features, structures, and sequence information.
+- **Select your "filters" or inputs.** You can restrict your query using various criteria, such as genomic region, specific genes, particular variants, etc.
+- **Choose the "attributes" or specific information to output.** You have a wide range of attributes that you can choose your query to output, such as features, structures, and sequence information.
 
 ![biomart_homepage](../img/biomart_query.png)
 
