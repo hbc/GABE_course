@@ -172,13 +172,14 @@ The BioMart web tool for data mining the Ensembl database is easy to use and req
 ![biomart_homepage](../img/biomart_query.png)
 
 Our Goal: Use BioMart to collect information () about dbSNP variants on chromosome 19 that have the phenotype *Cholesterol Total*.
+
 1. Select the `Ensembl Variation 84` database and under that `Homo sapiens Short Variants (SNPs and indels excluding flagged variants) (GRCh38.p5)`
 _**NOTE:** if we wanted to use an older version of BioMart, we could click on the lower right-hand link to `View in archive site`._
-3. Click on `Filters`, expand `REGION:` and select chromosome `19`, then expand `GENERAL VARIANT FILTERS:` and select `dbSNP` in the Variant source menu, and select `Cholesterol Total` in the `Phenotype` menu.
-4. Now click on the "Counts" button on the top left corner, how many SNPs does it count for the specific filter and out of how many total?
-5. Next, let's pick the output fields we want by clicking on `Attributes`. Under `VARIANT ASSOCIATED INFORMATION:` select only `Variant Name` and `Variant Source` in the `Variant Information` category. In the `Phenotype Annotation` category, pick `Associated gene with phenotype` and `Phenotype description`.
-6. Click on `Results` button in the upper left-hand corner. Save output to a comma-separated value (CSV) file.
-7. In the HTML table, click on the link for `APOE` to take you to the SNP's Ensembl gene page. 
+* Click on `Filters`, expand `REGION:` and select chromosome `19`, then expand `GENERAL VARIANT FILTERS:` and select `dbSNP` in the Variant source menu, and select `Cholesterol Total` in the `Phenotype` menu.
+* Now click on the "Counts" button on the top left corner, how many SNPs does it count for the specific filter and out of how many total?
+* Next, let's pick the output fields we want by clicking on `Attributes`. Under `VARIANT ASSOCIATED INFORMATION:` select only `Variant Name` and `Variant Source` in the `Variant Information` category. In the `Phenotype Annotation` category, pick `Associated gene with phenotype` and `Phenotype description`.
+* Click on `Results` button in the upper left-hand corner. Save output to a comma-separated value (CSV) file.
+* In the HTML table, click on the link for `APOE` to take you to the SNP's Ensembl gene page. 
 
 ***
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
