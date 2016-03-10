@@ -154,7 +154,7 @@ While Ensembl contains extensive genomic information, we often want to mine the 
 
 Click on `Tools` in the top menu bar. Tools are available for analyzing your own variant data, searching the Ensembl genomes for your DNA or protein sequence, and converting your data's coordinates or Ensembl IDs to a current version. 
 	
-	BioMart is an extremely useful tool used for data-mining Ensembl's vast composite database to return custom information. Let's explore this tool in a little more depth.
+BioMart is an extremely useful tool used for data-mining Ensembl's vast composite database to return custom information. Let's explore this tool in a little more depth.
 
 ![tools](../img/ensembl_tools.png)
 
