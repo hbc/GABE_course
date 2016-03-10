@@ -92,7 +92,7 @@ Each species in Ensembl has its own home page, where you can find out who provid
 	The `Gene` page is organized as follows:
 	
 	- The top of the page has a **gene overview**, giving a gene description, synonyms, location, and number of transcripts. In addition, there are links to comparative analysis data and associated protein families and phenotypes.	
-	- The overview is followed by the **transcript table**. (*NOTE: If the transcript table does not appear by default, click on `Show transcript table`*). All transcripts identified using any evidence are provided in the table. The transcripts are color-coded based on whether the transcript is protein-coding or non-coding, as well as, by the quality of evidence:
+	- The overview is followed by the **transcript table**. (_**NOTE:** If the transcript table does not appear by default, click on `Show transcript table`_). All transcripts identified using any evidence are provided in the table. The transcripts are color-coded based on whether the transcript is protein-coding or non-coding, as well as, by the quality of evidence:
 	
 		- **Gold:** protein-coding transcripts are Ensembl/Havana merges - essentially reviewed annotations with highest confidence
 		- **Red:** protein-coding transcripts with less confidence
@@ -177,7 +177,8 @@ The BioMart web tool for data mining the Ensembl database is easy to use and req
 _**NOTE:** if we wanted to use an older version of BioMart, we could click on the lower right-hand link to `View in archive site`._
 * Click on `Filters`, expand `REGION:` and select chromosome `19`, then expand `GENERAL VARIANT FILTERS:` and select `dbSNP` in the Variant source menu, and select `Cholesterol Total` in the `Phenotype` menu.
 * Now click on the "Counts" button on the top left corner, how many SNPs does it count for the specific filter and out of how many total?
-* Next, let's pick the output fields we want by clicking on `Attributes`. Under `VARIANT ASSOCIATED INFORMATION:` select only `Variant Name` and `Variant Source` in the `Variant Information` category. In the `Phenotype Annotation` category, pick `Associated gene with phenotype` and `Phenotype description`. *NOTE: there may be several chromosome related attributes selected by default, if this is the case unselect these options.*
+* Next, let's pick the output fields we want by clicking on `Attributes`. Under `VARIANT ASSOCIATED INFORMATION:` select only `Variant Name` and `Variant Source` in the `Variant Information` category. In the `Phenotype Annotation` category, pick `Associated gene with phenotype` and `Phenotype description`.
+  _**NOTE:** there may be several chromosome related attributes selected by default, if this is the case unselect these    options._
 * Click on `Results` button in the upper left-hand corner. Save output to a comma-separated value (CSV) file.
 * In the HTML table, click on the link for `APOE` to take you to the SNP's Ensembl gene page. 
 
