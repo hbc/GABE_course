@@ -85,7 +85,7 @@ Each species in Ensembl has its own home page, where you can find out who provid
 	![stats](../img/ensembl_info.png)
 
 4. Go back to the human genome page by clicking on the image. In the search bar type `ldlr`.
-5. From the search results select `LDLR (Human Gene)`. The gene page for MOV10 should populate. 
+5. From the search results select `LDLR (Human Gene)`. The gene page for LDLR should populate. 
 	
 	![gene_view](../img/ensembl_ldlr_gene.png)
 	
@@ -95,14 +95,14 @@ Each species in Ensembl has its own home page, where you can find out who provid
 	- The overview is followed by the **transcript table**. All transcripts identified using any evidence are provided in the table. The transcripts are color-coded based on whether the transcript is protein-coding or non-coding, as well as, by the quality of evidence:
 	
 		- **Gold:** protein-coding transcripts are Ensembl/Havana merges - essentially reviewed annotations with highest confidence
-		- **Red:** protein-coding transcripts are less confidence
+		- **Red:** protein-coding transcripts with less confidence
 		- **Blue:** non-coding transcripts
 		
 		In addition to coloring, Ensembl also provides flags in the table for **"Transcript Support Levels"**, which highlight how well-supported or poorly-supported are the transcript models.
 		
 		Also provided in the table are the links to the **Consensus CoDing Sequence** sets (CCDS) for available transcripts. The CCDS is a consensus set of coding sequences established as a collaborative effort between NCBI, Ensembl, Vega, UniProt-SwissProt, and UCSC. 
 		
-		Note the Ensembl ID for MOV10 gene: ENSG00000155363. Ensembl uses the following format for naming:
+		Note the Ensembl ID for LLDR gene: ENSG00000130164. Ensembl uses the following format for naming:
 	
 		- ENSG###########	Ensembl Gene ID
 		- ENST###########	Ensembl Transcript ID
@@ -115,7 +115,7 @@ Each species in Ensembl has its own home page, where you can find out who provid
 		- DAR (Danio rerio) for zebrafish: ENSDARG###
 	
 
-	- Below the transcript table is a summary section with links to external databases, followed by visualization of the transcripts.
+	- Below the transcript table is a summary section with links to other databases, followed by visualization of the transcripts.
 	
 	![transcript_vis](../img/ensembl_transcripts.png)
 	
@@ -123,9 +123,18 @@ Each species in Ensembl has its own home page, where you can find out who provid
 	
 	- The side panel has **detailed gene information** displayed as a hierarchical tree. The various categories provide detailed and downloadable gene information, including associated sequence data, regulatory regions, GO terms, comparative genomics information, and variation data.
 	
-6. Let's suppose we are interested in the MOV10-001 transcript. Click on the MOV10-001 transcript ID, `ENST00000413052`. This should open a new tab entitled `Transcript: MOV10-001` with detailed information for the transcript. 
+6. Let's suppose we are interested in the LDLR-002 transcript. Click on the LDLR-002 transcript ID, `ENST00000558013`. This should open a new tab entitled `Transcript: LDLR-002` with detailed information for the transcript. 
 
-	- If you click on `exons`, the sequence for each of the exons will be displayed below. If you click on `12 domains and features` the associated domains are output. If you click on `625 variations`, all variants for the transcript are listed with variation IDs, supporting evidence, and predicted effect on protein function. Additional detailed information on the transcript and protein is available on the side panel. 
+	- If you click on `exons`, the sequence for each of the exons will be displayed below. If you click on `91 domains and features` the associated domains are output. If you click on `2043 variations`, all variants for the transcript are listed with variation IDs, supporting evidence, and predicted effect on protein function. Additional detailed information on the transcript and protein is available on the side panel. 
+
+7. Now, let's go back to the `Gene: LDLR` tab and select `variant table` from the menu on the left.
+
+8. Next, let's filter the variant list for only variants from `HapMap` only. This selection can be found under `Evidence`, which is under `Filter Other Columns`.
+
+9. The next thing we want to do is look at one of the dbSNP variants called `rs6511720`. Click on the rs ID, this should result in a new tab called `Variant: rs6511720`.
+
+10. This page lists details about the variant and external and internal links to investigate further "explore this variant."
+
 
 7. Let's now visualize our our transcripts for the gene using the `Location` tab. There are three separate parts to this window:
 	- The chromosome with haplotypes and patches flagged within the image. Selecting a region of the chromosome can move you to a new location.
@@ -184,109 +193,6 @@ _**NOTE:** if we wanted to use an older version of BioMart, we could click on th
 7. Click on `Results` button in the upper left-hand corner. Save output to a comma-separated value (CSV) file.
 8. In the HTML table, click on the link for `MOV10` to take you to the Ensembl gene page.
 
-#### biomaRt R package
-When you are performing an NGS analysis, you often find a need to access BioMart, for example, to find genomic locations, convert gene IDs, or filter sequences from your data. Luckily for us, there is an R package for BioMart, called `biomaRt`, which allows us to perform BioMart queries from R.
-
-Let's explore BioMart functionality in R using a counts dataset with Ensembl IDs as row names. We would like to convert the Ensembl IDs to gene names. We can use `biomaRt` package to perform this conversion easily within R.
-
-Let's open RStudio and create a new R project named `biomart` on our Desktop. Ensure you are in the correct working directory, then create three folders: `data`, `meta`, and `results`. Finally, create a new script and save as `biomart.R`.
-
-Click on the link to the [counts file](https://raw.githubusercontent.com/hbc/NGS_Data_Analysis_Course/master/sessionIV/results/counts.txt) and save it to your `data` folder.
-
-Read in the counts file:
-
-```
-# Read in counts file
-full_counts <- read.table("data/counts.txt")
-counts <- head(full_counts, n=50)
-```
-
-Install the `biomaRt` package. The package is from Bioconductor, so we can use the following code to install:
-
-```
-source("http://bioconductor.org/biocLite.R")
-biocLite("biomaRt")
-```
-Now load the library:
-
-```
-# Load library
-library("biomaRt")
-```
-
-Connect to a BioMart database:
-```
-# To connect to a BioMart database - useMart()
-listMarts(host =  'www.ensembl.org')
-
-ensembl <- useMart('ENSEMBL_MART_ENSEMBL', 
-                host =  'www.ensembl.org')
-```
-
-Choose a dataset to query:
-```
-# To query the chosen BioMart database for a specific species - useDataset()
-datasets <- listDatasets(ensembl)
-View(datasets)
-
-mart<- useDataset("mmusculus_gene_ensembl", 
-                  useMart('ENSEMBL_MART_ENSEMBL', 
-                          host =  'www.ensembl.org'))
-```
-
-Build a query using your specified attributes, filters, and values:
-```
-# To build a query - getBM(filters, attributes, values)
-
-## "Attributes" is a vector of attributes for the output we want to generate
-attributes <- listAttributes(mart)
-View(attributes)
-
-## "Filters" is a vector for the input to the query
-filters <- listFilters(mart)
-View(filters)
-
-## "Values" is a vector of values for the filter
-```
-Use BioMart to return gene names for a list of Ensembl IDs:
-```
-# Use BioMart to return gene names for a list of Ensembl IDs
-mart <- useDataset("mmusculus_gene_ensembl", 
-                  useMart('ENSEMBL_MART_ENSEMBL', 
-                          host =  'www.ensembl.org'))
-
-gene.names <- getBM(filters= "ensembl_gene_id", 
-                    attributes= c("ensembl_gene_id", "external_gene_name"),
-                    values= row.names(counts),
-                    mart= mart)
-
-ens.id <- row.names(counts)
-GeneName <- gene.names[match(ens.id,gene.names$ensembl_gene_id),"external_gene_name"]
-new <- data.frame(counts,GeneName)
-write.table(new, "results/new_counts.txt", sep="\t")
-```
-What if you are using an older genome? 
-
-Check the archived BioMart sites to determine the archived database desired. 
-
-If we want to use the archived databases in R, we need to change our query a bit:
-```
-# Using an older genome build
-
-mart_mm9 <- useDataset("mmusculus_gene_ensembl",
-                useMart(biomart = "ENSEMBL_MART_ENSEMBL",
-                        host = "may2012.archive.ensembl.org"))
-
-attributes_mm9 <- listAttributes(mart_mm9)
-View(attributes_mm9)
-
-gene.names_mm9 <- getBM(filters= "ensembl_gene_id", 
-                    attributes= c("ensembl_gene_id", "external_gene_id"),
-                    values= row.names(counts),
-                    mart= mart_mm9)
-
-# human archive for GRCH37 genome build: host = "grch37.ensembl.org"
-```
 
 ***
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
