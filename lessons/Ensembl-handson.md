@@ -171,7 +171,7 @@ The BioMart web tool for data mining the Ensembl database is easy to use and req
 
 ![biomart_homepage](../img/biomart_query.png)
 
-Our Goal: Use BioMart to collect information () about dbSNP variants on chromosome 19 that have the phenotype *Cholesterol Total*.
+**Our Goal**: Use BioMart to collect information () about dbSNP variants on chromosome 19 that have the phenotype *Cholesterol Total*.
 
 1. Select the `Ensembl Variation 84` database and under that `Homo sapiens Short Variants (SNPs and indels excluding flagged variants) (GRCh38.p5)`
 _**NOTE:** if we wanted to use an older version of BioMart, we could click on the lower right-hand link to `View in archive site`._
