@@ -1,29 +1,26 @@
 ---
 title: "Biological Databases: Ensembl/BioMart"
-author: "Mary Piper"
-date: "Friday, February 26, 2016"
+author: "Mary Piper, Radhika Khetani"
+date: "Wednesday, March 9, 2016"
 ---
 
-Contributors: Mary Piper
-
-Approximate time: 1.5 hours
+Approximate time: 45 minutes
 
 ## Learning Objectives
 
-* learn how to use features of the Ensembl biological database and genome browser to access information and data during an NGS analysis
-
+* learn how to use features of the Ensembl biological database to access information
 
 ## Intro to Ensembl/Biomart
 
 ### The Ensembl Project
 ![ensembl_logo](../img/e_bang.png)
 
-The Ensembl genome annotation system, developed jointly by the EBI and the Wellcome Trust Sanger Institute, has been used for the annotation, analysis and display of vertebrate genomes since 2000. All data are open source, i.e. freely available to the scientific community and are updated every 2-3 months.
+The Ensembl genome annotation system, developed jointly by the EBI and the Wellcome Trust Sanger Institute, has been used for the annotation, analysis and display of vertebrate genomes since 2000. Ensembl is an excellent example of a secondary database that collects, curates and combines information for easy access to multiple databases in one place. All the Ensembl generated information is freely available to the scientific community and is updated regularly.
 
 Since 2009, the [Ensembl](http://useast.ensembl.org/index.html) site has been complemented by the [Ensembl genomes](http://ensemblgenomes.org) sites for [bacteria](http://ensemblgenomes.org/info/genomes?division=1), [protists](http://ensemblgenomes.org/info/genomes?division=5), [fungi](http://ensemblgenomes.org/info/genomes?division=3), [plants](http://ensemblgenomes.org/info/genomes?division=4) and [invertebrate metazoa](http://ensemblgenomes.org/info/genomes?division=2), enabling users to use a single collection of interfaces for accessing and comparing genome-scale data from species across the taxonomy. _**NOTE:** no annotations available through Ensembl for viral genomes._
 
 ### Ensembl species and annotations
-In the current release of the main Ensembl site (83), over 80 vertebrate species are supported, with over half of these species being mammals [[1](http://nar.oxfordjournals.org/content/early/2015/12/19/nar.gkv1157.full.pdf)]. The dataset also includes the invertebrates yeast, *C. elegans*, and fruitfly to aid in more accurate generation of phylogenetic gene trees. *(Current species statistics for the  non-vertebrate databases are also [available](http://nar.oxfordjournals.org/content/44/D1/D574.full)).*
+In the current release of the main Ensembl site (84), over 80 vertebrate species are supported, with over half of these species being mammals [[1](http://nar.oxfordjournals.org/content/early/2015/12/19/nar.gkv1157.full.pdf)]. The dataset also includes the invertebrates yeast, *C. elegans*, and fruitfly to aid in more accurate generation of phylogenetic gene trees. *(Current species statistics for the  non-vertebrate databases are also [available](http://nar.oxfordjournals.org/content/44/D1/D574.full)).*
 
 **All supported species have comprehensive, evidence-based gene annotations.** The "Gencode gene set" is used to create the Ensembl annotations and is made up of:
 
@@ -55,7 +52,7 @@ The browser can be used to easily access information at the genome, gene and pro
 	- a UniProt accession number (for example, P51587)
 	- a disease name (for example, coronary heart disease)
 	- a variation (for example, rs1223)
-	- a location - a genomic region (for example, rat X:100000..200000)
+	- a location - a genomic region (for example, human 12:105000..200070)
 	- a PDBe ID or a Gene Ontology (GO) term
 
 	Most search results will take you to the appropriate Ensembl view through a results page. If you search using a location you will be directed straight to the location tab (this tab provides a view of a region of a genome).
@@ -87,10 +84,10 @@ Each species in Ensembl has its own home page, where you can find out who provid
 
 	![stats](../img/ensembl_info.png)
 
-4. Go back to the human genome page by clicking on the image. In the search bar type `mov10`.
-5. From the search results select `MOV10 (Human Gene)`. The gene page for MOV10 should populate. 
+4. Go back to the human genome page by clicking on the image. In the search bar type `ldlr`.
+5. From the search results select `LDLR (Human Gene)`. The gene page for MOV10 should populate. 
 	
-	![gene_view](../img/ensembl_mov10_gene.png)
+	![gene_view](../img/ensembl_ldlr_gene.png)
 	
 	The `Gene` page is organized as follows:
 	
