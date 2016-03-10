@@ -171,25 +171,14 @@ The BioMart web tool for data mining the Ensembl database is easy to use and req
 
 ![biomart_homepage](../img/biomart_query.png)
 
-1. Let's use BioMart to information on genomic location and transcript count for the gene list we created in our previous homework, [sigOE_hw.txt](https://raw.githubusercontent.com/hbc/NGS_Data_Analysis_Course/master/sessionIV/results/sigOE_hw.txt). Download this dataset by clicking on the link if you do not already have it on your computer.
-2. Click on `Dataset` and choose the database `Ensembl Genes 83` and `Homo sapiens genes(GRCh38.p5)`. 
+Our Goal: Use BioMart to collect information () about dbSNP variants on chromosome 19 that have the phenotype *Cholesterol Total*.
+1. Select the `Ensembl Variation 84` database and under that `Homo sapiens Short Variants (SNPs and indels excluding flagged variants) (GRCh38.p5)`
 _**NOTE:** if we wanted to use an older version of BioMart, we could click on the lower right-hand link to `View in archive site`._
-3. Click on `Filters`. Expand `GENE` and click on the box next to `Input external references ID list`. Choose `HGNC symbol(s)` from the drop-down menu.
-4. Either choose the file `sigOE_hw.txt` or copy and paste the gene names in the file into the text box.
-5. Now click on `Attributes`. Keep `Features` selected.
-6. Expand `GENE` and choose the following:
-	
-	- Ensembl Gene ID
-	- Description
-	- Chromosome Name
-	- Gene Start (bp)
-	- Gene End (bp)
-	- Strand
-	- Associated Gene Name
-	- Transcript count
-7. Click on `Results` button in the upper left-hand corner. Save output to a comma-separated value (CSV) file.
-8. In the HTML table, click on the link for `MOV10` to take you to the Ensembl gene page.
-
+3. Click on `Filters`, expand `REGION:` and select chromosome `19`, then expand `GENERAL VARIANT FILTERS:` and select `dbSNP` in the Variant source menu, and select `Cholesterol Total` in the `Phenotype` menu.
+4. Now click on the "Counts" button on the top left corner, how many SNPs does it count for the specific filter and out of how many total?
+5. Next, let's pick the output fields we want by clicking on `Attributes`. Under `VARIANT ASSOCIATED INFORMATION:` select only `Variant Name` and `Variant Source` in the `Variant Information` category. In the `Phenotype Annotation` category, pick `Associated gene with phenotype` and `Phenotype description`.
+6. Click on `Results` button in the upper left-hand corner. Save output to a comma-separated value (CSV) file.
+7. In the HTML table, click on the link for `APOE` to take you to the SNP's Ensembl gene page. 
 
 ***
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
