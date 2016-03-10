@@ -87,7 +87,7 @@ Each species in Ensembl has its own home page, where you can find out who provid
 4. Go back to the human genome page by clicking on the image. In the search bar type `ldlr`.
 5. From the search results select `LDLR (Human Gene)`. The gene page for MOV10 should populate. 
 	
-	![gene_view](../img/ensembl_mov10_gene.png)
+	![gene_view](../img/ensembl_ldlr_gene.png)
 	
 	The `Gene` page is organized as follows:
 	
