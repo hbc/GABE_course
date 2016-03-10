@@ -52,7 +52,7 @@ The browser can be used to easily access information at the genome, gene and pro
 	- a UniProt accession number (for example, P51587)
 	- a disease name (for example, coronary heart disease)
 	- a variation (for example, rs1223)
-	- a location - a genomic region (for example, rat X:100000..200000)
+	- a location - a genomic region (for example, human 12:105000..200070)
 	- a PDBe ID or a Gene Ontology (GO) term
 
 	Most search results will take you to the appropriate Ensembl view through a results page. If you search using a location you will be directed straight to the location tab (this tab provides a view of a region of a genome).
