@@ -185,7 +185,9 @@ _**NOTE:** if we wanted to use an older version of BioMart, we could click on th
 ***
 **Contact Information:**
 
-*Email:* [bioinformatics@hsph.harvard.edu](mailto:bioinformatics@hsph.harvard.edu)
+*Personal Email:* [rkhetani@hsph.harvard.edu](mailto:rkhetani@hsph.harvard.edu)
+
+*Group Email:* [bioinformatics@hsph.harvard.edu](mailto:bioinformatics@hsph.harvard.edu)
 
 *URL:* [bioinformatics.sph.harvard.edu](http://bioinformatics.sph.harvard.edu)
 
