@@ -102,7 +102,7 @@ Each species in Ensembl has its own home page, where you can find out who provid
 		
 		Also provided in the table are the links to the **Consensus CoDing Sequence** sets (CCDS) for available transcripts. The CCDS is a consensus set of coding sequences established as a collaborative effort between NCBI, Ensembl, Vega, UniProt-SwissProt, and UCSC. 
 		
-		Note the Ensembl ID for LLDR gene: ENSG00000130164. Ensembl uses the following format for naming:
+		Note the Ensembl ID for LDLR gene: ENSG00000130164. Ensembl uses the following format for naming:
 	
 		- ENSG###########	Ensembl Gene ID
 		- ENST###########	Ensembl Transcript ID
@@ -181,6 +181,11 @@ _**NOTE:** if we wanted to use an older version of BioMart, we could click on th
   _**NOTE:** there may be several chromosome related attributes selected by default, if this is the case unselect these    options._
 * Click on `Results` button in the upper left-hand corner. Save output to a comma-separated value (CSV) file.
 * In the HTML table, click on the link for `APOE` to take you to the SNP's Ensembl gene page. 
+
+***
+*Contact Information:*
+Email: [bioinformatics@hsph.harvard.edu](mailto:bioinformatics@hsph.harvard.edu)
+URL: [bioinformatics.sph.harvard.edu](http://bioinformatics.sph.harvard.edu)
 
 ***
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
