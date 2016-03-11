@@ -183,9 +183,11 @@ _**NOTE:** if we wanted to use an older version of BioMart, we could click on th
 * In the HTML table, click on the link for `APOE` to take you to the SNP's Ensembl gene page. 
 
 ***
-*Contact Information:*
-Email: [bioinformatics@hsph.harvard.edu](mailto:bioinformatics@hsph.harvard.edu)
-URL: [bioinformatics.sph.harvard.edu](http://bioinformatics.sph.harvard.edu)
+**Contact Information:**
+
+*Email:* [bioinformatics@hsph.harvard.edu](mailto:bioinformatics@hsph.harvard.edu)
+
+*URL:* [bioinformatics.sph.harvard.edu](http://bioinformatics.sph.harvard.edu)
 
 ***
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
